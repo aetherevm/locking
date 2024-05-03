@@ -1,0 +1,22 @@
+// Copyright Aether Labs
+// SPDX-License-Identifier:BSLv1.1(https://github.com/aetherevm/aether/blob/master/LICENSE)
+syntax = "proto3";
+package aether.locking.v1beta1;
+
+import "gogoproto/gogo.proto";
+import "cosmos_proto/cosmos.proto";
+import "amino/amino.proto";
+
+import "aether/locking/v1beta1/locking.proto";
+
+option go_package = "github.com/aetherevm/locking/types";
+
+// Params defines the locking module's parameters.
+message Params {
+  option (gogoproto.goproto_stringer) = false;
+  // max_entries is the max entries for locked delegation (per pair).
+  uint32 max_entries = 1;
+  // Rates are the rates of rewards
+  repeated Rate rates = 2 [(gogoproto.nullable) = false, (amino.dont_omitempty) = true];
+}
+
