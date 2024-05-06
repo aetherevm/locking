@@ -1,5 +1,3 @@
-// Copyright Aether Labs
-// SPDX-License-Identifier:BSLv1.1(https://github.com/aetherevm/aether/blob/master/LICENSE)
 package types
 
 // locking module event types

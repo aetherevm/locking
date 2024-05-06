@@ -1,5 +1,3 @@
-// Copyright Aether Labs
-// SPDX-License-Identifier:BSLv1.1(https://github.com/aetherevm/aether/blob/master/LICENSE)
 syntax = "proto3";
 package aether.locking.v1beta1;
 
@@ -17,6 +15,6 @@ message Params {
   // max_entries is the max entries for locked delegation (per pair).
   uint32 max_entries = 1;
   // Rates are the rates of rewards
-  repeated Rate rates = 2 [(gogoproto.nullable) = false, (amino.dont_omitempty) = true];
+  repeated Rate rates = 2
+      [ (gogoproto.nullable) = false, (amino.dont_omitempty) = true ];
 }
-

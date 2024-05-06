@@ -1,5 +1,3 @@
-// Copyright Aether Labs
-// SPDX-License-Identifier:BSLv1.1(https://github.com/aetherevm/aether/blob/master/LICENSE)
 syntax = "proto3";
 package aether.locking.v1beta1;
 
@@ -18,5 +16,6 @@ message GenesisState {
     (gogoproto.nullable) = false
   ];
   // LockedDelegation defines all the locked delegations on the system
-  repeated LockedDelegation locked_delegations = 2 [(gogoproto.nullable) = false];
+  repeated LockedDelegation locked_delegations = 2
+      [ (gogoproto.nullable) = false ];
 }
